@@ -7,9 +7,9 @@ function signOut() {
 
   function onSignIn(googleUser) {
       console.log("Inside function")
-   // document.getElementById("logreg-forms").style.display = "none";
-      document.getElementById("information").style.display = 'block';
-
+    document.getElementById("logreg-forms").style.display = "none";
+   //   document.getElementById("information").style.display = 'block';
+ document.getElementById("information").style.visibility = 'visible';
     
     // Useful data for your client-side scripts:
     var profile = googleUser.getBasicProfile();
