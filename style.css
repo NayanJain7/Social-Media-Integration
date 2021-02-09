@@ -22,9 +22,10 @@ body {
   border: none;
   margin-left: 40px;
 }
-.information {
+#information {
     margin-top: 45px;
     margin-left: 350px;
+    visibility: hidden;
 }
 /* login section end */
 /* <====================================================> */
