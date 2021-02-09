@@ -6,48 +6,90 @@
       content="68572524931-i5pc27qv3bne6h0imu46ggbqkuhcm40p.apps.googleusercontent.com"
     />
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <style>
-        .g-signin2{
-            margin-left: 500px;
-            margin-top: 200px;
-        }
-
-        .signout{
-            margin-top: 50px;
-            margin-left: 535px;
-        }
-        
-    </style>
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css" />
+   
   </head>
   <body>
-    <h2>Welcome to my page</h2>
-    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+   
 
-    <div  class="signout"><a href="https://nayanjain7.github.io/Social-Media-Integration/" onclick="signOut();">Sign out</a></div>
+     <!-- login section start -->
+    <div id="logreg-forms">
+      <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">
+        Sign in with
+      </h1>
+      <div>
+        <button
+          class="g-signin2 btn social-btn"
+          data-onsuccess="onSignIn"
+          type="button"
+          data-theme="dark"
+        />
 
-    <script>
-      function signOut() {
-        var auth2 = gapi.auth2.getAuthInstance();
-        auth2.signOut().then(function () {
-          console.log("User signed out.");
-        });
-      }
+         <button
+          class="g-signin2 btn social-btn"
+          data-onsuccess="onSignIn"
+          type="button"
+          data-theme="dark"
+        />
+          GOOGLE
+        </button>
+      </div>
+     
+      </div>
+    </div>
+    <!-- login section end -->
 
-      function onSignIn(googleUser) {
-        // Useful data for your client-side scripts:
-        var profile = googleUser.getBasicProfile();
-        // console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-        alert(profile.getName());
-       console.log('Full Name: ' + profile.getName());
-    console.log('Given Name: ' + profile.getGivenName());
-        // console.log('Family Name: ' + profile.getFamilyName());
-        // console.log("Image URL: " + profile.getImageUrl());
-        // console.log("Email: " + profile.getEmail());
+    <!-- Information section start -->
 
-        // The ID token you need to pass to your backend:
-        var id_token = googleUser.getAuthResponse().id_token;
-        console.log("ID Token: " + id_token);
-      }
-    </script>
+    <div class="container information ">
+      <div class="row m-4">
+        <div class="col-4">
+          <div class="login-purple-pink p-3 shadow-lg rounded text-center">
+            <div class="profile-img">
+              <img
+                src="https://www.privateislandsonline.com/uploads/245/image_d05d567275.jpg"
+                alt="profile_img"
+                height="140px"
+                width="140px;"
+                id="image"
+              />
+            </div>
+            <form class="mt-5">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control form-control-sm bg-light"
+                  id="name"
+                  readonly
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control form-control-sm bg-light"
+                  id="email"
+                  readonly
+                />
+              </div>
+
+              <div class="mt-5">
+                <a href="/" class="btn btn-sm btn-light col" onclick="signOut();"> Signout </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Information section end -->
   </body>
 </html>
