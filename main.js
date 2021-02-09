@@ -7,7 +7,7 @@ function signOut() {
 
   function onSignIn(googleUser) {
       console.log("Inside function")
-    document.getElementById("logreg-forms").style.display = "none";
+   // document.getElementById("logreg-forms").style.display = "none";
       document.getElementById("information").style.display = 'block';
 
     
