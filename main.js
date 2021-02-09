@@ -7,6 +7,7 @@ function signOut() {
 
   function onSignIn(googleUser) {
     document.getElementById("logreg-forms").style.display = "none";
+      document.getElementById("information").style.visibility = 'visible';
 
     
     // Useful data for your client-side scripts:
